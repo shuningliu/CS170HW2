@@ -1,0 +1,100 @@
+Shuning Liu 8639296 HW2
+
+Q1:
+fork generate an identical process (child process) as the process called fork(). They have same stack content but seperate stack. But thread is only a segment of a program,
+so threads can share stack.
+whether memory is shared. whether the data structure supports an independent program or only a segment of program.
+
+Q2:
+if(head->id>=node->id)return NULL;  //In this case, it has smallest id and stay at behind.
+while(head->next!=NULL){
+	if(head->next->id>=node->id){
+		return head;
+	}
+	head = head->next;
+}
+return head;  //In this case, node has largest ID and stay at last position.
+
+
+if(pos==NULL){
+	node->next = head;
+	return node; //Insert at beginning
+}
+node->next = pos->next;
+pos->next = node; //Insert at beginning or end;
+
+
+Q3:
+i:
+echo
+hello
+
+ii:
+echo hello $world
+
+iii:
+echo hello
+
+iv:
+echo
+hello
+`
+v:
+hello
+//to create space
+
+i:
+error message
+ii:
+A file called cat is added to directory, with content hello world
+iii:
+An empty file called cat is added, and hello world is printed
+//to create sppce
+
+i:
+error:The token '&&' is not a valid statement separator in this version.
+
+ii:
+a
+b
+
+iii:
+error:The ampersand (&) character is not allowed.
+
+
+Q4:
+foo:0
+boo:1
+
+foo:0
+boo:0
+
+foo:1
+boo:0
+
+boo:0
+foo:1
+
+boo:0
+foo:0
+
+boo:1
+foo:0
+
+Solution: add another global variable int count=0;
+after foo finished i=i+1, count++;
+after foo finished print, count++;
+Then In boo function, keep while loop with condition count<1, then read and write to i.
+keep while loop with condition count<2, then print.
+
+result is 
+foo:0
+boo:1
+
+
+
+
+
+
+	
+
